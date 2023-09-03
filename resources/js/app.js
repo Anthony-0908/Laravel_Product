@@ -14,9 +14,11 @@ import { createApp } from 'vue';
  */
 
 const app = createApp({});
+import router from './router/index';
+app.use(router);
 
-import ExampleComponent from './components/ExampleComponent.vue';
-app.component('example-component', ExampleComponent);
+import MainApp from './components/main.vue';
+app.component('root', MainApp);
 
 /**
  * The following block of code may be used to automatically register your
